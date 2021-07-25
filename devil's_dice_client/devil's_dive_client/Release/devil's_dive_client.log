@@ -1,0 +1,118 @@
+﻿  game.cpp
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(6,46): warning C4244: аргумент: преобразование "const int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(6,36): warning C4244: аргумент: преобразование "const int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(7,47): warning C4244: аргумент: преобразование "const int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(7,37): warning C4244: аргумент: преобразование "const int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(9,52): warning C4244: аргумент: преобразование "const int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(9,41): warning C4244: аргумент: преобразование "const int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(10,53): warning C4244: аргумент: преобразование "const int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(10,42): warning C4244: аргумент: преобразование "const int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(260,20): warning C4018: <: несоответствие типов со знаком и без знака
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(291,47): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(296,46): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(299,47): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(326,54): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(330,83): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(330,51): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(333,77): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(333,45): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(337,84): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(337,52): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(343,78): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(343,46): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(360,72): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+E:\repos\devil's_dice_client\devil's_dive_client\game.cpp(365,76): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  Создание кода
+  1 of 159 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  devil's_dive_client.vcxproj -> E:\repos\devil's_dice_client\Release\devil's_dive_client.exe
