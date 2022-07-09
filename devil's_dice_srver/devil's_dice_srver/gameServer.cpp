@@ -160,12 +160,22 @@ void gameServer::winCheck()
 	if (rerollPlayer == playerAmount)
 	{
 		bool draw = true;
+		std::string winScore = "0";
 		for (int i = 0; i < playerAmount; i++) {
-			if (draw && std::string(pl[i].totalPoints) <= "21")
-				winner = i, draw = false;
-			else if (std::string(pl[i].totalPoints) > std::string(pl[winner].totalPoints) && std::string(pl[i].totalPoints) <= "21")
-				winner = i, draw = false;
+			if (std::string(pl[i].totalPoints) <= "21") {
+				if (draw && std::string(pl[i].totalPoints) > winScore) {
+					winner = i;
+					draw = false;
+					winScore = std::string(pl[i].totalPoints);
+				}
+				else if (std::string(pl[i].totalPoints) > std::string(pl[winner].totalPoints))
+					winner = i, draw = false;
+				else if (std::string(pl[i].totalPoints) == std::string(pl[winner].totalPoints))
+					draw = true;
+			}
 		}
+		if (draw) // удалить потом
+			winner = -1;
 		win[0] = '1';
 	}
 }
