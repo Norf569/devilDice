@@ -13,7 +13,11 @@ gameServer::gameServer()
 		std::cout << "Socket invalid\n";
 	}
 
-	sockaddr.sin_addr.s_addr = inet_addr("26.107.50.164");
+	ipAdr = new char[256];
+	std::cout << "Enter server IP address: ";
+	std::cin.getline(ipAdr, 256);
+
+	sockaddr.sin_addr.s_addr = inet_addr(ipAdr);
 	sockaddr.sin_port = htons(1111);
 	sockaddr.sin_family = AF_INET;
 	sizeOfAddr = sizeof(sockaddr);
@@ -26,7 +30,7 @@ gameServer::gameServer()
 
 	win = new char[4];
 	memset(win, 0, sizeof(win));
-	winner = 0;
+	winner = -1;
 }
 
 void gameServer::start()
@@ -50,7 +54,7 @@ void gameServer::start()
 void gameServer::restart()
 {
 	memset(win, 0, sizeof(win));
-	winner = 0;
+	winner = -1;
 	pl = new Player[playerAmount];
 }
 
@@ -152,11 +156,16 @@ void gameServer::winCheck()
 	{
 		if (pl[i].reroll[0] == '1')
 			rerollPlayer++;
-		if (std::string(pl[i].totalPoints) > std::string(pl[winner].totalPoints) && std::string(pl[i].totalPoints) <= "21")
-			winner = i;
 	}
 	if (rerollPlayer == playerAmount)
 	{
+		bool draw = true;
+		for (int i = 0; i < playerAmount; i++) {
+			if (draw && std::string(pl[i].totalPoints) <= "21")
+				winner = i, draw = false;
+			else if (std::string(pl[i].totalPoints) > std::string(pl[winner].totalPoints) && std::string(pl[i].totalPoints) <= "21")
+				winner = i, draw = false;
+		}
 		win[0] = '1';
 	}
 }

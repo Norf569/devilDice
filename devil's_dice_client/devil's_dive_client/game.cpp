@@ -29,7 +29,7 @@ game::game() : thread(&game::recSend, this)
 	pName.setFillColor(sf::Color(0, 0, 0));*/
 	totalPoints = 0;
 	rerollAmount = 4;
-	winner = -1;
+	winner = -2;
 	win = false;
 	//
 	if (FAILED(WSAStartup(MAKEWORD(2, 1), &ws)))
@@ -43,7 +43,11 @@ game::game() : thread(&game::recSend, this)
 		std::cout << "Socket invalid\n";
 	}
 
-	sockaddr.sin_addr.s_addr = inet_addr("26.107.50.164");
+	ipAdr = new char[256];
+	std::cout << "Enter server IP address: ";
+	std::cin.getline(ipAdr, 256);
+
+	sockaddr.sin_addr.s_addr = inet_addr(ipAdr);
 	sockaddr.sin_port = htons(1111);
 	sockaddr.sin_family = AF_INET;
 	sizeOfAddr = sizeof(sockaddr);
@@ -112,7 +116,7 @@ void game::recPlNum()
 void game::restart()
 {
 	win = false;
-	winner = -1;
+	winner = -2;
 	rollAllDice();
 	memset(chDice, 0, sizeof(chDice));
 	rerollB = false;
@@ -320,6 +324,12 @@ void game::draw()
 				text.setPosition(720 + 100, 20 + 50 - 20);
 				window->draw(text);
 			}
+			else if (winner == -1)
+			{
+				text.setString("Fuck");
+				text.setPosition(720 + 100, 20 + 50 - 20);
+				window->draw(text);
+			}
 			continue;
 		}
 		plText.setString(std::to_string(i + 1));
@@ -362,6 +372,12 @@ void game::draw()
 		if (winner == i)
 		{
 			plText.setString("Winner!");
+			plText.setPosition(sf::Vector2f(60 + 20 + 300 + 50 + 10, 100 + 20 + 100 + (i - tmp) * 100));
+			window->draw(plText);
+		}
+		else if (winner == -1)
+		{
+			plText.setString("Fuck");
 			plText.setPosition(sf::Vector2f(60 + 20 + 300 + 50 + 10, 100 + 20 + 100 + (i - tmp) * 100));
 			window->draw(plText);
 		}

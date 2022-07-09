@@ -22,6 +22,7 @@ private:
 	static const int amountOfDices = 6;
 	const int diceSize = 100;
 	const int sDiceSize = 50;
+	char* ipAdr;
 	int playerAmount;
 	int totalPoints; //!
 	int rerollAmount;

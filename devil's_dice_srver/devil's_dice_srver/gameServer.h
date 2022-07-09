@@ -20,6 +20,7 @@ class gameServer
 {
 private:
 	static const int amountOfDices = 6;
+	char* ipAdr;
 	int playerAmount;
 	int rerollPlayer;
 	int sizeOfAddr;
