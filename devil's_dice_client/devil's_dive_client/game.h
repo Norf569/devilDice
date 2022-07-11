@@ -4,6 +4,7 @@
 #include "SFML/Graphics.hpp"
 #include <string>
 #include <winsock2.h>
+#include <ctime>
 
 #pragma comment(lib, "ws2_32.lib")
 #pragma warning(disable: 4996)

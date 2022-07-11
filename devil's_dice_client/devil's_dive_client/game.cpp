@@ -84,7 +84,13 @@ void game::start()
 		input();
 		draw();
 		if (win) {
-			Sleep(5000);
+			double timeStart = time(NULL);
+			double timeEnd = time(NULL);
+			while (timeEnd - timeStart < 5) {
+				timeEnd = time(NULL);
+				input();
+				draw();
+			}
 			restart();
 		}
 	}
